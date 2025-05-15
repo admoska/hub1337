@@ -1,10 +1,22 @@
+/**
+* Template Name: FlexStart
+* Template URL: https://bootstrapmade.com/flexstart-bootstrap-startup-template/
+* Updated: Jun 02 2024 with Bootstrap v5.3.3
+* Author: BootstrapMade.com
+* License: https://bootstrapmade.com/license/
+*/
 
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-
+/*--------------------------------------------------------------
+# Font & Color Variables
+# Help: https://bootstrapmade.com/color-system/
+--------------------------------------------------------------*/
+/* Fonts */
 @font-face {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Gilroy';
+  src: local('Gilroy Semibold'), local('Gilroy-Semibold'),
+  url('Gilroy-Semibold.woff2') format('woff2'),
+  url('Gilroy-Semibold.woff') format('woff'),
+  url('Gilroy-Semibold.ttf') format('truetype');
   font-weight: 600;
   font-style: normal;
 }
@@ -22,11 +34,11 @@
   --heading-color: white;
 
   /* Accent Color - This is the main accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out. */
-  --accent-color: #e81e2d;
+  --accent-color: #5a5aff;
 
   /* Contrast Color - This is a color used for text when the background color is one of the heading, accent, or default colors. Its purpose is to ensure proper contrast and readability when placed over these more dominant colors. */
   --contrast-color: white;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Gilroy', sans-serif;
 
 }
 
@@ -58,7 +70,7 @@
   --nav-dropdown-color: #212529;
 
   /* Nav Dropdown Hover Color - Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
-  --nav-dropdown-hover-color: #5a5aff;
+  --nav-dropdown-hover-color: hsl(278, 100%, 70%);
 }
 
 /* Smooth scroll */
@@ -69,16 +81,10 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
-
-*{
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
-}
 body {
   color: var(--default-color);
   background-color: var(--background-color);
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
+  font-family: var(--default-font);
 }
 
 a {
@@ -99,6 +105,7 @@ h4,
 h5,
 h6 {
   color: var(--heading-color);
+  font-family: var(--heading-font);
 }
 
 /*--------------------------------------------------------------
@@ -107,65 +114,25 @@ h6 {
 .header {
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 10px 0;
+  padding: 20px 0;
+  transition: all 0.5s;
   z-index: 997;
 }
-
-.card {
-  transition: transform 0.2s ease-in-out;
-  border-radius: 40px;
-}
-.card:hover {
-  transform: scale(1.05);
-}
-.card-body {
-  display: flex;
-  align-items: flex-start;
-}
-
-.card-body img {
-  border-radius: 30px;
-  margin-right: 15px;
-}
-
-
-.card-content {
-
-  flex: 1;
-}
-
-
-
-#recent-purchases .card-body {
-  padding: 20px;
-}
-
-#recent-purchases .card-title {
-  font-size: 18px;
-  font-weight: 600;
-  color: white;
-}
-
-#recent-purchases .card-text a {
-  color: var(--accent-color);
-  text-decoration: none;
-}
-
-
 
 .header .logo {
   line-height: 1;
 }
 
 .header .logo img {
-  max-height: 60px;
+  max-height: 36px;
+  margin-right: 8px;
 }
 
 
 .header .logo h1 {
-  font-size: 25px;
+  font-size: 30px;
   margin: 0;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--heading-color);
 }
 
@@ -179,7 +146,6 @@ h6 {
   transition: 0.3s;
   font-weight: 500;
 }
-
 .btn-logout:hover,
 .btn-logout:focus:hover {
   color: white;
@@ -187,38 +153,15 @@ h6 {
   box-shadow:  0 0 16px rgba(255 0 0 / 60%);;
 }
 
-
-.btn-other,
-.btn-other:focus {
-  color: var(--contrast-color);
-  background: rgba(0, 0,0, 0.1);
-  font-size: 15px;
-  padding: 8px 25px;
-  border-radius: 4px;
-  font-weight: 500;
-
-}
-
-.btn-other:hover{
-  color: var(--contrast-color);
-  background: rgba(0, 0,0, 0.1);
-  font-size: 15px;
-  padding: 8px 25px;
-  border-radius: 4px;
-  font-weight: 500;
-}
-
-
-
-
-
 .btn-getstarted,
 .btn-getstarted:focus {
   color: var(--contrast-color);
   background: var(--accent-color);
   font-size: 15px;
   padding: 8px 25px;
+
   border-radius: 4px;
+  transition: 0.3s;
   font-weight: 500;
 }
 
@@ -227,7 +170,7 @@ h6 {
 .btn-getstarted:focus:hover {
   color: var(--contrast-color);
   background: color-mix(in srgb, var(--accent-color), transparent 15%);
- }
+}
 
 @media (max-width: 1200px) {
   .header .logo {
@@ -327,7 +270,8 @@ h6 {
     color: var(--nav-color);
     padding: 18px 12px;
     font-size: 15px;
-     font-weight: 500;
+    font-family: var(--nav-font);
+    font-weight: 500;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -608,23 +552,134 @@ h6 {
   }
 }
 
-
+/*--------------------------------------------------------------
+# Global Footer
+--------------------------------------------------------------*/
 .footer {
   color: var(--default-color);
   background-color: var(--background-color);
-  font-size: 15px;
+  font-size: 14px;
   padding-bottom: 50px;
   position: relative;
 }
 
+.footer .footer-newsletter {
+  background-color: color-mix(in srgb, var(--accent-color), transparent 97%);
+  border-top: 1px solid color-mix(in srgb, var(--accent-color), transparent 85%);
+  border-bottom: 1px solid color-mix(in srgb, var(--accent-color), transparent 85%);
+  padding: 50px 0;
+}
 
-.social-links a {
+.footer .footer-newsletter h4 {
+  font-size: 24px;
+}
+
+.footer .footer-newsletter .newsletter-form {
+  margin-top: 30px;
+  padding: 6px 8px;
+  position: relative;
+  background-color: color-mix(in srgb, var(--background-color), transparent 50%);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  box-shadow: 0px 2px 25px color-mix(in srgb, var(--default-color), transparent 95%);
+  display: flex;
+  transition: 0.3s;
+  border-radius: 4px;
+}
+
+.footer .footer-newsletter .newsletter-form:focus-within {
+  border-color: var(--accent-color);
+}
+
+.footer .footer-newsletter .newsletter-form input[type=email] {
+  border: 0;
+  padding: 4px;
+  width: 100%;
+  background-color: color-mix(in srgb, var(--background-color), transparent 50%);
+  color: var(--default-color);
+}
+
+.footer .footer-newsletter .newsletter-form input[type=email]:focus-visible {
+  outline: none;
+}
+
+.footer .footer-newsletter .newsletter-form input[type=submit] {
+  border: 0;
+  font-size: 16px;
+  padding: 0 20px;
+  margin: -7px -8px -7px 0;
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  transition: 0.3s;
+  border-radius: 0 4px 4px 0;
+}
+
+.footer .footer-newsletter .newsletter-form input[type=submit]:hover {
+  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+}
+
+.footer .footer-newsletter .error-message {
+  display: none;
+  background: #df1529;
+  color: #ffffff;
+  text-align: left;
+  padding: 15px;
+  margin-top: 10px;
+  font-weight: 600;
+  border-radius: 4px;
+}
+
+.footer .footer-newsletter .sent-message {
+  display: none;
+  color: #ffffff;
+  background: #059652;
+  text-align: center;
+  padding: 15px;
+  margin-top: 10px;
+  font-weight: 600;
+  border-radius: 4px;
+}
+
+.footer .footer-newsletter .loading {
+  display: none;
+  background: var(--background-color);
+  text-align: center;
+  padding: 15px;
+  margin-top: 10px;
+}
+
+.footer .footer-newsletter .loading:before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin: 0 10px -6px 0;
+  border: 3px solid var(--accent-color);
+  border-top-color: var(--background-color);
+  animation: subscription-loading 1s linear infinite;
+}
+
+@keyframes subscription-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.footer .footer-top {
+  padding-top: 50px;
+}
+
+.footer .social-links a {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 40px;
   height: 40px;
-  border-radius: 50%;
+  border-radius: 4px;
   background-color: color-mix(in srgb, var(--accent-color), transparent 97%);
   border: 1px solid color-mix(in srgb, var(--accent-color), transparent 85%);
   font-size: 16px;
@@ -633,7 +688,7 @@ h6 {
   transition: 0.3s;
 }
 
-.social-links a:hover {
+.footer .social-links a:hover {
   color: var(--contrast-color);
   background-color: var(--accent-color);
 }
@@ -662,10 +717,6 @@ h6 {
   color: var(--accent-color);
 }
 
-.accordion-item{
-  background-color: transparent;
-}
-
 .footer .footer-links ul li {
   padding: 10px 0;
   display: flex;
@@ -684,8 +735,6 @@ h6 {
 
 .footer .footer-links ul a:hover {
   color: var(--accent-color);
-  text-shadow: 0 0 12px #e81e2d;
-  transition: 0.5s;
 }
 
 .footer .footer-about a {
@@ -727,8 +776,8 @@ h6 {
   background-color: var(--accent-color);
   width: 40px;
   height: 40px;
-  border-radius: 50%  ;
-  transition: all 0.6s;
+  border-radius: 4px;
+  transition: all 0.4s;
 }
 
 .scroll-top i {
@@ -820,6 +869,37 @@ section,
   }
 }
 
+/*--------------------------------------------------------------
+# Global Section Titles
+--------------------------------------------------------------*/
+.section-title {
+  text-align: center;
+  padding-bottom: 60px;
+  position: relative;
+}
+
+.section-title h2 {
+  font-size: 13px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  padding: 8px 20px;
+  margin: 0;
+  background: color-mix(in srgb, var(--accent-color), transparent 90%);
+  color: var(--accent-color);
+  display: inline-block;
+  text-transform: uppercase;
+  border-radius: 50px;
+  font-family: var(--default-font);
+}
+
+.section-title p {
+  color: var(--heading-color);
+  margin: 10px 0 0 0;
+  font-size: 32px;
+  font-weight: 700;
+  font-family: var(--heading-font);
+}
+
 .section-title p .description-title {
   color: var(--accent-color);
 }
@@ -838,7 +918,7 @@ section,
 }
 
 
-
+ 
 
 .hero h1 {
   margin: 0;
@@ -909,11 +989,8 @@ section,
   color: color-mix(in srgb, var(--accent-color), transparent 15%);
 }
 
-.hero .translateAnimation {
-  animation: logoAnimation 3s ease-in-out infinite;
-}
 .hero .animated {
-  animation: up-down 1s forwards;
+  animation: up-down 2s ease-in-out infinite alternate-reverse both;
 }
 
 @media (max-width: 640px) {
@@ -929,27 +1006,13 @@ section,
   }
 }
 
-
-@keyframes logoAnimation {
-  0% {
-    transform: translateX(-25px);
-  }
-
-  50% {
-    transform: translateX(25px);
-  }
-
-  100% {
-    transform: translateX(-25px);
-  }
-}
-
 @keyframes up-down {
   0% {
-    transform: rotate(180deg);
+    transform: translateY(10px);
   }
+
   100% {
-    transform: rotate(0deg);
+    transform: translateY(-10px);
   }
 }
 
@@ -1087,84 +1150,6 @@ section,
   color: var(--contrast-color);
 }
 
-.faq .faq-container .faq-item {
-  position: relative;
-  padding: 20px 0;
-  text-align: left;
-  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
-  overflow: hidden;
-}
-
-.faq .faq-container .faq-item:last-child {
-  margin-bottom: 0;
-}
-
-.faq .faq-container .faq-item h3 {
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 24px;
-  margin: 0 30px 0 0;
-  transition: 0.3s;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-}
-
-.faq .faq-container .faq-item h3 .num {
-  color: var(--accent-color);
-  padding-right: 5px;
-}
-
-.faq .faq-container .faq-item h3:hover {
-  color: var(--accent-color);
-}
-
-.faq .faq-container .faq-item .faq-content {
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: 0.3s ease-in-out;
-  visibility: hidden;
-  opacity: 0;
-}
-
-.faq .faq-container .faq-item .faq-content p {
-  margin-bottom: 0;
-  font-size: 14px;
-  text-align: left;
-  overflow: hidden;
-}
-
-.faq .faq-container .faq-item .faq-toggle {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 16px;
-  line-height: 0;
-  transition: 0.3s;
-  cursor: pointer;
-}
-
-.faq .faq-container .faq-item .faq-toggle:hover {
-  color: var(--accent-color);
-}
-
-.faq .faq-container .faq-active h3 {
-  color: var(--accent-color);
-}
-
-.faq .faq-container .faq-active .faq-content {
-  grid-template-rows: 1fr;
-  visibility: visible;
-  opacity: 1;
-  padding-top: 10px;
-}
-
-.faq .faq-container .faq-active .faq-toggle {
-  transform: rotate(90deg);
-  color: var(--accent-color);
-}
-
-
 /*--------------------------------------------------------------
 # Alt Features Section
 --------------------------------------------------------------*/
@@ -1173,7 +1158,7 @@ section,
 }
 
 .alt-features .icon-box h4 {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 700;
   margin: 0 0 10px 0;
 }
@@ -1235,20 +1220,20 @@ section,
 }
 
 .services .service-item.item-cyan {
-  border-bottom: 3px solid #0dcaf0;
+  border-bottom: 3px solid #ff4bff;
 }
 
 .services .service-item.item-cyan .icon {
-  color: #0dcaf0;
+  color: #ff4bff;
   background: rgba(13, 202, 240, 0.1);
 }
 
 .services .service-item.item-cyan .read-more {
-  color: #0dcaf0;
+  color: #ff4bff;
 }
 
 .services .service-item.item-cyan:hover {
-  background: #0dcaf0;
+  background: #ff4bff;
 }
 
 .services .service-item.item-orange {
@@ -1779,7 +1764,7 @@ section,
   bottom: 0;
   height: 100%;
   width: 100%;
-  background: url(../img/menu.svg) no-repeat center bottom;
+  background: url(https://excellentclient.pw/img/menu.svg) no-repeat center bottom;
   background-size: contain;
   z-index: 1;
 }
@@ -2701,7 +2686,7 @@ section,
 }
 
 /*--------------------------------------------------------------
-# impl.Starter Section Section
+# Starter Section Section
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
@@ -2875,52 +2860,4 @@ section,
   padding-left: 5px;
   color: color-mix(in srgb, var(--default-color), transparent 60%);
   font-size: 14px;
-}
-
-
-
-.media-box {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px;
-  margin-bottom: 100px;
-
-}
-
-/* Общие стили для видео */
-.embed-responsive-16by9 {
-  position: relative;
-  width: 469px;
-  height: 263px;
-
- border-radius: 30px;
-  overflow: hidden;
-}
-
-
-.contact{
-  text-align: center;
-  margin-top: 150px;
-  color: gray;
-}
-
-
-
-.embed-responsive .embed-responsive-item,
-.embed-responsive embed,
-.embed-responsive iframe,
-.embed-responsive object,
-.embed-responsive video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  height: 100%;
-  width: 100%;
-}
-
-/* Дополнительные стили для адаптивности на маленьких экранах */
-@media (max-width: 767px) {
-
 }
