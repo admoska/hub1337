@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Detla » Документы</title>
+    <title>HarCheats » Документы</title>
 
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta charset="UTF-8">
@@ -10,10 +10,11 @@
     <link href="vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
     <link href="vendor/aos/aos.css" rel="stylesheet">
     <link href="vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="img/logo.png">
 
     <link href="css/main.css" rel="stylesheet">
 
-    <link rel="icon" type="image/x-icon" href="/img/ico_logo.png">
+    <link rel="icon" type="image/x-icon" href="img/logo.png">
 
 
 </head>
@@ -22,34 +23,27 @@
 
 <header><div>
 
-<header id="header" class="header  fixed-top ">
-    <div class="container-xl d-flex align-items-center">
+<header id="header" class="header d-flex align-items-center fixed-top ">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
-        <a href="/" class="logo d-flex align-items-center me-auto">
+        <a href="index.html" class="logo d-flex align-items-center me-auto">
             <img src="img/logo.png" alt="">
-            <h1>Delta</h1>
+            <h1>HarCheats</h1>
         </a>
 
-        <nav id="navmenu" class="navmenu" >
+        <nav id="navmenu" class="navmenu">
             <ul>
-                <li><a href="/">Главная</a></li>
-
-
-                <li></li>
-
-
-                <li><a href="#footer">Документы</a></li>
+                <li><a href="index.html#hero">Главная<br></a></li>
+                <li><a href="eula.html#footer">Документы</a></li>
             </ul>
             <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
 
 
-
         
 
+        <a class="btn-getstarted flex-md-shrink-0" style="margin-left: 30px;" href="release/Inside Client.exe">Скачать Клиент</a>
 
-
-        <a class="btn-getstarted flex-md-shrink-0" style="margin-left: 30px; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#loginModal" data-bs-backdrop="static" data-bs-keyboard="false">Войти</a>
     </div>
 </header>
 </div></header>
@@ -60,7 +54,7 @@
         <p class="text-center fw-bold fs-3">Пользовательское соглашение</p>
         <text style="white-space: pre-line;">
 
-            Настоящее Пользовательское соглашение (далее – Соглашение) регулирует отношения между ДЕЛЬТАКЛИЕНТ - владельцем интернет-ресурса deltaclient.fun - и любым физическим лицом - Пользователем интернет-ресурса deltaclient.fun
+            Настоящее Пользовательское соглашение (далее – Соглашение) регулирует отношения между ИНСАЙДКЛИЕНТ - владельцем интернет-ресурса insideclient - и любым физическим лицом - Пользователем интернет-ресурса insideclient
 
             Предмет соглашения
             1.1 Компания занимается разработкой программного обеспечения, включая дополнительные загружаемые контенты (DLC), предназначенные для использования на платформе Minecraft.
@@ -104,34 +98,34 @@
 <footer id="footer" class="footer">
     <div class="container footer-top">
         <div class="row gy-4">
-            <div class="col-lg-4 col-md-6 footer-about" style="margin-top: 0px;">
-                <a href="/" class="d-flex align-items-center">
+            <div class="col-lg-4 col-md-6 footer-about">
+                <a href="index.html" class="d-flex align-items-center">
 
-                    <img src="img/logo.png" style="margin-left: -10px;" width="50px;">
+                    <!--<img src="img/logo.png"class="px-2" alt="" width="50px;"!-->
 
-                    <span>Delta</span>
+                    <span>HarCheats</span>
                 </a>
-                <div class="footer-contact">
+                <div class="footer-contact pt-3">
                     <p>Наш продукт не связан с MojangAB</p>
                     <p>все средства идут на развитие проекта.</p>
-                    <p class="mt-3"><strong>Email: </strong><span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d1b5b4bda5b091b5b4bda5b0b2bdb8b4bfa5ffb7a4bf">[email&#160;protected]</a></span></p>
+                    <p>сделано by admoska & анонимус777</p>
                 </div>
             </div>
 
             <div class="col-lg-2 col-md-3 footer-links">
                 <h4>Навигация</h4>
                 <ul>
-                    <li><i class="bi bi-dot"></i> <a href="/">Главная</a></li>
-                     <li><i class="bi bi-dot"></i> <a href="/#faq">Товары</a></li>
-                     <li><i class="bi bi-dot"></i> <a href="/#alt-features">Наши качества</a></li>
+                    <li><i class="bi bi-chevron-right"></i> <a href="index.html">Главная</a></li>
+                     <li><i class="bi bi-chevron-right"></i> <a href="index.html#faq">Вопросы</a></li>
+                     <li><i class="bi bi-chevron-right"></i> <a href="index.html#alt-features">Наши качества</a></li>
                 </ul>
             </div>
 
             <div class="col-lg-2 col-md-3 footer-links">
                 <h4>Документы</h4>
                 <ul>
-                    <li><i class="bi bi-dot"></i> <a href="/eula">Пользовательское соглашение</a></li>
-                    <li><i class="bi bi-dot"></i> <a href="/privacy_policy">Обработка данных</a></li>
+                    <li><i class="bi bi-chevron-right"></i> <a href="eula.html">Пользовательское соглашение</a></li>
+                    <li><i class="bi bi-chevron-right"></i> <a href="privacy_policy.html">Обработка данных</a></li>
                   </ul>
             </div>
 
@@ -139,9 +133,9 @@
                 <h4>Наши социальные сети</h4>
                 <p>Здесь мы собрали все наши официальные социальные сети, мы будем очень рады вашей подписке.</p>
                 <div class="social-links d-flex">
-                    <a href="https://www.youtube.com/@dezz_kryt" target="_blank"><i class="bi bi-youtube"></i></a>
-                    <a href="https://t.me/dlcformine" target="_blank"><i class="bi bi-telegram"></i></a>
-                    <a href="https://dsc.gg/deltaclient" target="_blank"><i class="bi bi-discord"></i></a>
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"><i class="bi bi-youtube"></i></a>
+                    <a href="https://www.youtube.com/watch?v=wQ1HWRavbA0" target="_blank"><i class="bi bi-telegram"></i></a>
+                    <a href="https://discord.gg/pqj7WZRK4Q" target="_blank"><i class="bi bi-discord"></i></a>
                 </div>
             </div>
 
@@ -150,14 +144,14 @@
 
 
     <div class="container copyright text-center mt-4">
-        <p>© <span>Copyright</span> <img src="img/logo.png" width="40px" style="margin: -5px"> <strong>Delta</strong ></p>
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">HarCheats</strong><span>          -> All Rights Reserved</span></p>
     </div>
 
 </footer>
 </div></footer>
-<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+<a href="eula.html#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="vendor/aos/aos.js"></script>
+<script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="vendor/aos/aos.js"></script>
 <script src="js/main.js"></script>
 
 </body>
